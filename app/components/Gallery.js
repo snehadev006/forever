@@ -78,7 +78,7 @@ export default function BirthdayPage() {
 
       {/* HERO */}
       <section className="text-center py-5">
-        <h1 className="hero-title">Happy Birthday, Sweetheart</h1>
+        <h1 className="hero-title">Happy Birthday, Sham</h1>
         <p className="hero-quote">
           “The best thing to hold onto in life is each other.”
         </p>

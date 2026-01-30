@@ -21,14 +21,14 @@ export default function LittleThingsPage() {
       icon: "❤️",
     },
     {
-      title: "Kindness",
-      text: "You have the biggest heart I know, always thinking of others first.",
+      title: "Caring",
+      text: "The way you care for me means everything to me.",
       icon: "✨",
     },
     {
-      title: "Our Morning Coffee",
-      text: "Even the simplest moments feel like magic when they're shared with you.",
-      icon: "☕",
+      title: "Your Innocence talk",
+      text: "Your innocence is one of the things I love most about you.",
+      icon: "🤍",
     },
     {
       title: "Your Passion",
@@ -36,9 +36,9 @@ export default function LittleThingsPage() {
       icon: "🔥",
     },
     {
-      title: "Your Music Taste",
-      text: "The way you hum along makes every song sweeter.",
-      icon: "🎵",
+      title: "Your childishness",
+      text: "I love your childish side when you’re with me.",
+      icon: "😊",
     },
     {
       title: "Safe Haven",

@@ -1,9 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useGlobalAudio } from "./GlobalAudio";
 
 export default function CoverPage() {
   const router = useRouter();
+  const { playMusic } = useGlobalAudio();
   const [showPopup, setShowPopup] = useState(false);
   const [count, setCount] = useState(null);
   const [particles, setParticles] = useState([]);
@@ -25,9 +27,7 @@ const [showAngryPopup, setShowAngryPopup] = useState(false);
     let num = 3;
     setCount(num);
 
-    const music = new Audio("/music/love.mp3");
-    music.volume = 0.6;
-    music.play().catch(err => console.log("Audio playback failed:", err));
+    playMusic();
 
     const timer = setInterval(() => {
       num--;
@@ -71,7 +71,7 @@ const [showAngryPopup, setShowAngryPopup] = useState(false);
         </p>
 
         <button className="reveal-button" onClick={() => setShowPopup(true)}>
-          <span className="button-text">Begin This Journey</span>
+          <span className="button-text">Begin our Journey</span>
           <span className="button-icon">✨</span>
         </button>
       </div>
@@ -82,12 +82,12 @@ const [showAngryPopup, setShowAngryPopup] = useState(false);
       onClick={(e) => e.stopPropagation()}
     >
       <img
-        src="/images/cute-angry.gif"
+        src="/images.gif"
         alt="cute angry"
         className="angry-img"
       />
 
-      <h3>Hmmph! 😤</h3>
+      <h3 className="mt-2 ms-4">Hmmph! 😤</h3>
 
       <p>
         I said I made something special for you…  

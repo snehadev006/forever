@@ -1,21 +1,22 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useGlobalAudio } from "./components/GlobalAudio";
 
 export default function LockPage() {
   const router = useRouter();
+  const { playMusic } = useGlobalAudio();
+
   const [pin, setPin] = useState("");
   const [shake, setShake] = useState(false);
 
-  const SECRET = "2909"; // change your PIN 💖
+  const SECRET = "2909";
 
-  // Safe auto unlock check
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const unlocked = localStorage.getItem("unlocked");
-      if (unlocked === "true") {
-        router.push("/home");
-      }
+    const unlocked = localStorage.getItem("unlocked");
+    if (unlocked === "true") {
+      router.push("/home");
     }
   }, [router]);
 
@@ -34,7 +35,6 @@ export default function LockPage() {
         }, 500);
       } else {
         setShake(true);
-
         setTimeout(() => {
           setShake(false);
           setPin("");
@@ -46,27 +46,19 @@ export default function LockPage() {
   return (
     <div className="lock-bg">
 
-      {/* animated lock */}
       <div className={`heart-lock ${shake ? "shake" : ""}`}>
         {pin.length === 4 ? "💖" : "🔒"}
       </div>
 
-      {/* dots */}
       <div className="pin-dots">
         {[1, 2, 3, 4].map((i) => (
-          <span
-            key={i}
-            className={pin.length >= i ? "filled" : ""}
-          />
+          <span key={i} className={pin.length >= i ? "filled" : ""} />
         ))}
       </div>
 
-      {/* keypad */}
       <div className="keypad">
         {[1,2,3,4,5,6,7,8,9].map((n) => (
-          <button key={n} onClick={() => press(n)}>
-            {n}
-          </button>
+          <button key={n} onClick={() => press(n)}>{n}</button>
         ))}
 
         <button onClick={() => setPin(pin.slice(0, -1))}>⌫</button>
@@ -75,7 +67,6 @@ export default function LockPage() {
       </div>
 
       <p className="hint">Enter our secret 💕</p>
-
     </div>
   );
 }

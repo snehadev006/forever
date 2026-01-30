@@ -1058,3 +1058,10 @@ body {
 .hint {
   text-shadow:0 0 10px rgba(255,150,180,.6);
 }
+.angry-img {
+  width: 120px;      /* adjust: 80px, 100px, 150px */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}

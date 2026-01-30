@@ -29,22 +29,21 @@ export default function MessagePage() {
         <h1 className="letter-title">To My Forever Love,</h1>
 
         <p>
-          Today is about celebrating the most beautiful person I know.  
-          Every year with you feels like a new chapter in a story I never want to end.
+          Happy Birthday sham, Intha year yellam unnaku nalladha irukum yellam happiness unnaku kedaikum. Past yellam marandhutu, indha new year la namma future pathi yosikalaam. 
         </p>
 
         <p>
-          Your presence is my peace, your laughter is my favorite song,  
-          and your love is the greatest gift I could ever receive.
+          
         </p>
 
         <p>
-          I wish for your day to be as radiant as your smile and as kind as your soul.  
-          May this year bring you as much joy as you’ve brought into my life.
+          I will always be by your side, supporting you, loving you, and cherishing every moment we share together. You are my everything, and I can't wait to see what the future holds for us.
         </p>
-
+        <p>
+          “First you were a stranger, then you became my colleague, then my best friend, and now my lover — and I hope our future will be just as beautiful.”
+        </p>
         <div className="divider"></div>
-
+            <p>Click the button below for little surprise</p>
         <button
           className="future-magic-btn"
           onClick={() => setShowFuture(true)}
@@ -87,14 +86,14 @@ export default function MessagePage() {
             </h3>
 
             <p className="future-sub">
-              Forever starts with us…
+             Love You Sham ❤️
             </p>
           </div>
         </div>
       )}
 
       {/* bottom nav */}
-      <div className="bottom-pill">
+      {/* <div className="bottom-pill">
 
         <span onClick={() => router.push("#")}>
           Home
@@ -108,7 +107,7 @@ export default function MessagePage() {
           Message
         </span>
 
-      </div>
+      </div> */}
 
     </main>
   );
